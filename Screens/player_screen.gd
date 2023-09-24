@@ -50,6 +50,11 @@ func _on_add_funds_button_down():
 func _on_subtract_funds_button_down():
 	Manager.subtract_funds(580)
 
+func _on_generate_card_button_down():
+	var player = State.generate_random_player()
+	var pc: PlayerCard = PlayerCard.new(player)
+	$CanvasLayer/Test.add_child(pc)
+
 func change_player_portrait(portrait_number):
 	player_portrait.texture = portraits[portrait_number]
 	player_portrait.scale = Vector2(0.3,0.3)
@@ -63,5 +68,4 @@ func change_player_card_rarity(rarity):
 		player_card.color = Color8(100,72,145,255)
 	elif rarity == State.RarityNames.LEGENDARY:
 		player_card.color = Color8(167,116,31,255)
-
 

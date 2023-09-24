@@ -157,6 +157,8 @@ Top
 Random Notes
 -------------------------------------------------------------
 
+Portraits must be 480 x 600
+
 and your players are like pokemon cards
 with random rarity/stats
 when you have tryouts you'll basically be opening a booster pack

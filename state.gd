@@ -4,6 +4,7 @@ enum RarityNames {COMMON = 1, SPECIAL = 2, EXCEPTIONAL = 3, LEGENDARY = 4, UNIQU
 enum Roles {TOP = 0, JUNGLE = 1, MIDDLE = 2, BOTTOM = 3, SUPPORT = 4}
 
 var player_scene: PackedScene = preload("res://Characters/player.tscn")
+var player_card_scene: PackedScene = preload("res://Characters/player_card.tscn")
 
 var player_list = []
 var female_first_names = []
@@ -19,6 +20,7 @@ var current_day: int
 
 # signals
 signal time_passed()
+signal player_updated(player_id)
 
 func _ready():
 	load_file("res://Data/female.txt", female_first_names)
@@ -72,7 +74,7 @@ func generate_random_player(rarity: RarityNames = RarityNames.COMMON):
 	player.player_handle = generate_gamer_tag(randi_range(0,3))
 	player.birthday = generate_birthday(rarity)
 	generate_n_stats(player, 4, rarity)
-
+	player.role = Roles.keys()[randi() % Roles.size()]
 	player_list.append(player)
 	pass_time(3)
 	return player
@@ -85,7 +87,6 @@ func generate_random_player_with_role(role: Roles, rarity: RarityNames = RarityN
 	var player = generate_random_player(rarity)
 	player.role = role
 	return player
-
 
 func generate_stats_with_rarity(rarity: int) -> int:
 	var stat = 0
@@ -122,7 +123,6 @@ func generate_n_stats(player, num_stats, rarity: int = 1) -> void:
 	player.teamwork = generated_stats[1]
 	player.consistency = generated_stats[2]
 	player.confidence = generated_stats[3]
-
 
 func generate_random_name(list: Array) -> String:
 	return list[randi_range(0, list.size()-1)]

@@ -1,0 +1,387 @@
+[gd_scene load_steps=10 format=3 uid="uid://cnb8g5qwhngnr"]
+
+[ext_resource type="Texture2D" uid="uid://cdrf8qjh0v12h" path="res://Graphics/bg.png" id="1_3v7j8"]
+[ext_resource type="Script" path="res://Characters/player_card.gd" id="1_5m8tv"]
+[ext_resource type="Theme" uid="uid://bw7g8w7oitso6" path="res://Themes/header.tres" id="1_qr45t"]
+[ext_resource type="Texture2D" uid="uid://ym4828e3eqk" path="res://Graphics/over.png" id="2_53u4j"]
+[ext_resource type="Theme" uid="uid://ey5le5an7gye" path="res://Themes/small.tres" id="2_px74o"]
+[ext_resource type="Theme" uid="uid://yklbf0kevnng" path="res://Themes/tiny.tres" id="3_t5nak"]
+[ext_resource type="Texture2D" uid="uid://c56l7c08nrwnl" path="res://Graphics/progress.png" id="3_t62vq"]
+[ext_resource type="Texture2D" uid="uid://bnpov50mu10t0" path="res://Graphics/Portraits/1.jpg" id="7_ui5v1"]
+
+[sub_resource type="Theme" id="Theme_by1sp"]
+
+[node name="PlayerCard" type="CanvasLayer"]
+script = ExtResource("1_5m8tv")
+
+[node name="MainBG" type="ColorRect" parent="."]
+offset_right = 436.0
+offset_bottom = 512.0
+color = Color(0.654902, 0.454902, 0.121569, 1)
+
+[node name="Border" type="ColorRect" parent="MainBG"]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 13.0
+offset_right = 426.0
+offset_bottom = 496.0
+color = Color(0.294118, 0.294118, 0.294118, 0.321569)
+
+[node name="PortraitBorder" type="ColorRect" parent="MainBG/Border"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.067
+anchor_top = 0.115
+anchor_right = 0.415
+anchor_bottom = 0.482
+offset_left = -11.671
+offset_top = -9.315
+offset_right = -3.395
+offset_bottom = 3.15799
+color = Color(0, 0, 0, 1)
+
+[node name="Portrait" type="TextureRect" parent="MainBG/Border/PortraitBorder"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 148.0
+offset_bottom = 184.0
+texture = ExtResource("7_ui5v1")
+expand_mode = 4
+
+[node name="Role" type="Label" parent="MainBG/Border"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.074
+anchor_top = 0.054
+anchor_right = 0.393
+anchor_bottom = 0.092
+offset_left = 34.438
+offset_top = -2.974
+offset_right = -36.309
+offset_bottom = 4.748
+text = "MIDDLE
+"
+horizontal_alignment = 1
+
+[node name="Identity" type="ColorRect" parent="MainBG/Border"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.45
+anchor_top = 0.102
+anchor_right = 0.961
+anchor_bottom = 0.301
+offset_left = 0.149994
+offset_top = 0.937996
+offset_right = 0.106995
+offset_bottom = 0.218979
+grow_horizontal = 2
+color = Color(0.411765, 0.411765, 0.411765, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainBG/Border/Identity"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -54.0
+offset_right = 54.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_constants/separation = -5
+
+[node name="PlayerHandle" type="Label" parent="MainBG/Border/Identity/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("1_qr45t")
+text = "Player Handle"
+horizontal_alignment = 1
+
+[node name="PlayerName" type="Label" parent="MainBG/Border/Identity/VBoxContainer"]
+layout_mode = 2
+theme = ExtResource("2_px74o")
+text = "Player Name"
+horizontal_alignment = 1
+
+[node name="AgeContainer" type="HBoxContainer" parent="MainBG/Border/Identity"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -40.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 10
+
+[node name="AgeLabel" type="Label" parent="MainBG/Border/Identity/AgeContainer"]
+layout_mode = 2
+text = "Age: 
+"
+
+[node name="Age" type="Label" parent="MainBG/Border/Identity/AgeContainer"]
+layout_mode = 2
+text = "22
+"
+horizontal_alignment = 2
+
+[node name="BirthdayContainer" type="HBoxContainer" parent="MainBG/Border/Identity"]
+layout_mode = 2
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.079
+offset_left = 64.0
+offset_top = -1.0
+offset_right = -58.0
+offset_bottom = 8.495
+theme = ExtResource("3_t5nak")
+alignment = 1
+
+[node name="BirthdayLabel" type="Label" parent="MainBG/Border/Identity/BirthdayContainer"]
+layout_mode = 2
+text = "Birthday"
+
+[node name="Birthday" type="Label" parent="MainBG/Border/Identity/BirthdayContainer"]
+layout_mode = 2
+text = "1/1/1900
+"
+horizontal_alignment = 1
+
+[node name="MainStats" type="ColorRect" parent="MainBG/Border"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.453
+anchor_top = 0.376
+anchor_right = 0.959
+anchor_bottom = 0.5
+offset_left = -2.089
+offset_top = -7.856
+offset_right = 1.93298
+offset_bottom = -5.5
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0.427451, 0.443137, 1)
+
+[node name="EnergyContainer" type="HBoxContainer" parent="MainBG/Border/MainStats"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.355
+offset_left = 8.0
+offset_top = 4.0
+offset_right = -9.0
+offset_bottom = -2.01
+
+[node name="EnergyLabel" type="Label" parent="MainBG/Border/MainStats/EnergyContainer"]
+layout_mode = 2
+theme = ExtResource("2_px74o")
+text = "Energy"
+
+[node name="Node2D" type="Node2D" parent="MainBG/Border/MainStats/EnergyContainer"]
+position = Vector2(62, 5)
+scale = Vector2(0.45, 0.3)
+
+[node name="EnergyBar" type="TextureProgressBar" parent="MainBG/Border/MainStats/EnergyContainer/Node2D"]
+offset_left = 4.44446
+offset_top = 10.0
+offset_right = 304.444
+offset_bottom = 40.0
+value = 95.0
+texture_under = ExtResource("1_3v7j8")
+texture_over = ExtResource("2_53u4j")
+texture_progress = ExtResource("3_t62vq")
+
+[node name="LaningContainer" type="HBoxContainer" parent="MainBG/Border/MainStats"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.651
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = -6.362
+offset_right = -9.0
+offset_bottom = -3.0
+
+[node name="LaningLabel" type="Label" parent="MainBG/Border/MainStats/LaningContainer"]
+layout_mode = 2
+theme = ExtResource("2_px74o")
+text = "Laning"
+
+[node name="Node2D" type="Node2D" parent="MainBG/Border/MainStats/LaningContainer"]
+position = Vector2(62, 5)
+scale = Vector2(0.45, 0.3)
+
+[node name="LaningBar" type="TextureProgressBar" parent="MainBG/Border/MainStats/LaningContainer/Node2D"]
+offset_left = 4.44446
+offset_top = 10.0
+offset_right = 304.444
+offset_bottom = 40.0
+value = 50.0
+texture_under = ExtResource("1_3v7j8")
+texture_over = ExtResource("2_53u4j")
+texture_progress = ExtResource("3_t62vq")
+
+[node name="StatLabels" type="VBoxContainer" parent="MainBG/Border"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.048
+anchor_top = 0.5
+anchor_right = 0.408
+anchor_bottom = 1.0
+offset_left = 0.176001
+offset_top = 17.5
+offset_right = -40.504
+offset_bottom = -10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stats" type="Label" parent="MainBG/Border/StatLabels"]
+layout_mode = 2
+theme = SubResource("Theme_by1sp")
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "Stats
+"
+horizontal_alignment = 2
+
+[node name="Teamwork" type="Label" parent="MainBG/Border/StatLabels"]
+layout_mode = 2
+text = "Teamwork"
+horizontal_alignment = 2
+
+[node name="Consistency" type="Label" parent="MainBG/Border/StatLabels"]
+layout_mode = 2
+text = "Consistency"
+horizontal_alignment = 2
+
+[node name="Confidence" type="Label" parent="MainBG/Border/StatLabels"]
+layout_mode = 2
+text = "Confidence"
+horizontal_alignment = 2
+
+[node name="Charisma" type="Label" parent="MainBG/Border/StatLabels"]
+layout_mode = 2
+text = "Charisma"
+horizontal_alignment = 2
+
+[node name="Toxicity" type="Label" parent="MainBG/Border/StatLabels"]
+layout_mode = 2
+text = "Toxicity
+"
+horizontal_alignment = 2
+
+[node name="WorkEthic" type="Label" parent="MainBG/Border/StatLabels"]
+layout_mode = 2
+text = "Work Ethic"
+horizontal_alignment = 2
+
+[node name="PlayerStats" type="VBoxContainer" parent="MainBG/Border"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.448
+anchor_top = 0.5
+anchor_right = 0.96
+anchor_bottom = 0.827
+offset_left = -0.0240021
+offset_top = 17.5
+offset_right = 2.51999
+offset_bottom = 6.21298
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="StatBars" type="Node2D" parent="MainBG/Border/PlayerStats"]
+position = Vector2(7, 29)
+scale = Vector2(0.66, 0.4)
+
+[node name="Teamwork" type="TextureProgressBar" parent="MainBG/Border/PlayerStats/StatBars"]
+offset_top = 100.5
+offset_right = 300.0
+offset_bottom = 130.5
+size_flags_horizontal = 0
+value = 50.0
+texture_under = ExtResource("1_3v7j8")
+texture_over = ExtResource("2_53u4j")
+texture_progress = ExtResource("3_t62vq")
+tint_under = Color(0.768627, 0.584314, 0.858824, 1)
+tint_over = Color(0.454902, 0.454902, 0.454902, 1)
+tint_progress = Color(0.560784, 0.533333, 0.32549, 1)
+
+[node name="Consistency" type="TextureProgressBar" parent="MainBG/Border/PlayerStats/StatBars"]
+offset_top = 172.0
+offset_right = 300.0
+offset_bottom = 202.0
+size_flags_horizontal = 0
+value = 50.0
+texture_under = ExtResource("1_3v7j8")
+texture_over = ExtResource("2_53u4j")
+texture_progress = ExtResource("3_t62vq")
+tint_under = Color(0.768627, 0.584314, 0.858824, 1)
+tint_over = Color(0.454902, 0.454902, 0.454902, 1)
+tint_progress = Color(0.560784, 0.533333, 0.32549, 1)
+
+[node name="Confidence" type="TextureProgressBar" parent="MainBG/Border/PlayerStats/StatBars"]
+offset_top = 246.5
+offset_right = 300.0
+offset_bottom = 276.5
+size_flags_horizontal = 0
+value = 50.0
+texture_under = ExtResource("1_3v7j8")
+texture_over = ExtResource("2_53u4j")
+texture_progress = ExtResource("3_t62vq")
+tint_under = Color(0.768627, 0.584314, 0.858824, 1)
+tint_over = Color(0.454902, 0.454902, 0.454902, 1)
+tint_progress = Color(0.560784, 0.533333, 0.32549, 1)
+
+[node name="Charisma" type="TextureProgressBar" parent="MainBG/Border/PlayerStats/StatBars"]
+offset_top = 23.0
+offset_right = 300.0
+offset_bottom = 53.0
+size_flags_horizontal = 0
+value = 50.0
+texture_under = ExtResource("1_3v7j8")
+texture_over = ExtResource("2_53u4j")
+texture_progress = ExtResource("3_t62vq")
+tint_under = Color(0.768627, 0.584314, 0.858824, 1)
+tint_over = Color(0.454902, 0.454902, 0.454902, 1)
+tint_progress = Color(0.560784, 0.533333, 0.32549, 1)
+
+[node name="Toxicity" type="TextureProgressBar" parent="MainBG/Border/PlayerStats/StatBars"]
+offset_top = 321.0
+offset_right = 300.0
+offset_bottom = 351.0
+size_flags_horizontal = 0
+value = 50.0
+texture_under = ExtResource("1_3v7j8")
+texture_over = ExtResource("2_53u4j")
+texture_progress = ExtResource("3_t62vq")
+tint_under = Color(0.768627, 0.584314, 0.858824, 1)
+tint_over = Color(0.454902, 0.454902, 0.454902, 1)
+tint_progress = Color(0.560784, 0.533333, 0.32549, 1)
+
+[node name="WorkEthic" type="TextureProgressBar" parent="MainBG/Border/PlayerStats/StatBars"]
+offset_top = 392.0
+offset_right = 300.0
+offset_bottom = 422.0
+size_flags_horizontal = 0
+value = 50.0
+texture_under = ExtResource("1_3v7j8")
+texture_over = ExtResource("2_53u4j")
+texture_progress = ExtResource("3_t62vq")
+tint_under = Color(0.768627, 0.584314, 0.858824, 1)
+tint_over = Color(0.454902, 0.454902, 0.454902, 1)
+tint_progress = Color(0.560784, 0.533333, 0.32549, 1)
+
+[node name="Rarity" type="Label" parent="MainBG/Border"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.759
+anchor_top = 0.029
+anchor_right = 0.972
+anchor_bottom = 0.09
+offset_left = 4.53299
+offset_top = -11.949
+offset_right = 4.66501
+offset_bottom = -12.181
+grow_horizontal = 0
+text = "Rarity"
+horizontal_alignment = 2
