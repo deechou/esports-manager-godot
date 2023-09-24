@@ -10,7 +10,7 @@ var p4: Texture2D = load("res://Graphics/Portraits/4.jpg")
 
 var portraits = [p1,p2,p3,p4]
 
-@onready var player_card: ColorRect = $MainBG
+@onready var player_card: ColorRect = get_tree().find_node()
 @onready var player_portrait: TextureRect = $MainBG/Border/PortraitBorder/Portrait
 @onready var player_name_label: Label = $MainBG/Border/Identity/VBoxContainer/PlayerName
 @onready var player_handle_label: Label = $MainBG/Border/Identity/VBoxContainer/PlayerHandle
