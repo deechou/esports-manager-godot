@@ -1,0 +1,165 @@
+Goals of the game:
+1.) To create a fun simulation experience for the player to deal with.
+
+I want the Player to experience the same sort of joy they get when they
+play the sims, and the randomly generated storylines that they are part of
+but also can affect. Pros will say toxic things on social media. Pros
+will get significant others and quit playing professionally. Pros will
+be poached. Pros will gain and lose sponsorships. Pros will start
+drama with other Pros. Pros will have medical issues, family issues,
+personal issues. Pros will have birthdays.
+
+2.) To create a fun RPG-like progression system.
+
+The Player will enjoy watching his pros get more competent. They will
+get better at the game in many specific ways (laning, roaming, champ pool, etc)
+They will get better at things outside of the game. They will get better
+at streaming, which increases your cash flow. They will get more social
+media influence. They will start as no name rookies and become famous pros,
+storied veterans, or just washed-up contestents.
+
+The Player will also enjoy watching his team grow. They will start with a
+low level headquarters (Mom's basement) and end up in an Esports-Facility,
+kitted with gyms, kitchens, chefs, staff, sensory deprivation pods, etc.
+The team itself will go from unheard of amateur team, to getting into the
+Proving Grounds circuit (will be renamed), to the Pro circuit.
+The team will start off playing in local free for fun tournaments, and
+progress to big esports events with thousands of viewers.
+The team will eventually earn sponsorships and fans.
+The team will get more money and influence and be able to afford better
+players, coaches, staff, etc.
+
+3.) To create a fun Autobattler to simulate the pro matches
+
+The actual matches will be represented with an Autobattler game. It will
+have turn based decisions that the Player can make (perhaps choose which
+lane to gank in an RPS-like system), and the drafting phase. It is very
+important that this Autobattler is fun, because it will happen a lot. It
+should be at least as fun as a Pokemon Battle.
+
+
+4.) To tell a competent story
+
+There will be a basic story to complete (start off in mom's basement,
+end up winning the ultimate finals tournament). The majority of the
+storyline will be told through random events and player decisions,
+but what storyline does exist should be compelling.
+
+5.) To have eSports inside jokes
+
+There will be many references to things that happen in the eSports
+community.
+
+
+-------------------------------------------------------------
+Progamer Stats
+-------------------------------------------------------------
+
+Work Ethic
+	Increased Base Max Energy
+	Increased Energy Gain
+	Decreases Energy Cost for Training activities
+
+Resilience
+	Multiplier that mitigates effects that lower morale
+
+Toxicity
+	Increases chance of saying something bad and losing streaming level
+	Increases chance of saying something bad on social media and losing sponsorship opportunities
+	Lowers Morale of teammates when losing lane
+
+Teamwork
+	Increases Morale of teammates during matches
+	Increases positive effects of group training activities
+
+Charisma
+	Increases chance of fixing issues due to Toxicity
+	Increases revenue from streaming
+	Increases growth of stream
+	Increases likelihood of sponsorship opportunities
+
+Creativity
+	This will be like a "luck" stat.
+	Might randomly affect certain things like training, or in matches.
+	Basically you can "Crit" if you roll high on a Creativity check
+
+Consistency
+	Lowers the range of any RNG elements
+
+Confidence
+	Mitigates negative debuffs like "Stage Fright", "Rookie status"
+
+Loyalty
+	Likelihood of Progamer staying on the same team
+	Lowers chance of poaching
+
+
+-------------------------------------------------------------
+Derived Stats
+-------------------------------------------------------------
+
+
+Level
+	Starts at 1
+	Gains exp through events (Matches, Training, SoloQ, Random Events)
+
+Energy
+	Amount of Energy per day you can use on activities
+	Increases with progamer level
+
+
+-------------------------------------------------------------
+Match Stats
+-------------------------------------------------------------
+
+
+Champion Pool
+	Will affect the draft phase of the match
+	Can increase with training
+
+Roaming
+	Multiplier that affects what happens when the progamer roams
+	Can increase with training
+
+
+Laning
+	Multiplier that affects what happens when the progamer is in lane
+	Can increase with training
+
+-------------------------------------------------------------
+General Perks
+-------------------------------------------------------------
+
+Safe Laner
+		Lowers chance of getting solo killed
+
+-------------------------------------------------------------
+Role Specific Perks
+-------------------------------------------------------------
+
+Mid
+	Assassin
+		Increases chance of solo killing
+
+ADC
+	Great Farmer
+		Gives buff to exp gained on wave kill
+
+Top
+	Great Tank
+		Gives chance of surviving a solo kill
+		Gives buff to teamfight stage
+	Great Engager
+		Gives buff to teamfight Stage
+
+
+--------------------------------------------------------------
+Random Notes
+-------------------------------------------------------------
+
+and your players are like pokemon cards
+with random rarity/stats
+when you have tryouts you'll basically be opening a booster pack
+depending on what you can afford you can make an amazing "deck"
+I'm gonna give them random perks (super situational perks) and negative buffs(like "doesnt shower") or whatever
+it'll be like the d2 affix system for items haha

@@ -1,0 +1,114 @@
+[gd_scene load_steps=5 format=3 uid="uid://bmgqmo77bep3l"]
+
+[ext_resource type="Script" path="res://Screens/overlay.gd" id="1_s5rxd"]
+
+[sub_resource type="Theme" id="Theme_uk561"]
+
+[sub_resource type="Animation" id="Animation_5tf8n"]
+resource_name = "add_funds"
+length = 0.6
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("TopRight:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.05, 1.05), Vector2(1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("TopRight:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0.0862745, 0.85098, 0, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8sk3m"]
+_data = {
+"add_funds": SubResource("Animation_5tf8n")
+}
+
+[node name="Overlay" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -580.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_s5rxd")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_top = -2.0
+offset_bottom = 49.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.333333, 0.254902, 0.164706, 0.262745)
+
+[node name="TopLeft" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+offset_left = 12.0
+offset_top = 9.0
+offset_right = 219.0
+offset_bottom = 65.0
+theme = SubResource("Theme_uk561")
+theme_override_constants/h_separation = 20
+columns = 2
+metadata/_edit_use_anchors_ = true
+
+[node name="DayLabel" type="Label" parent="TopLeft"]
+layout_mode = 2
+text = "DAY
+"
+horizontal_alignment = 2
+
+[node name="DayNumber" type="Label" parent="TopLeft"]
+layout_mode = 2
+text = "1
+"
+
+[node name="TimeLabel" type="Label" parent="TopLeft"]
+layout_mode = 2
+text = "CURRENT TIME"
+horizontal_alignment = 2
+
+[node name="Time" type="Label" parent="TopLeft"]
+layout_mode = 2
+text = "7"
+
+[node name="TopRight" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -160.0
+offset_bottom = 64.0
+grow_horizontal = 0
+theme = SubResource("Theme_uk561")
+
+[node name="Label" type="Label" parent="TopRight"]
+layout_mode = 2
+text = "FUNDS: $"
+
+[node name="MoneyLabel" type="Label" parent="TopRight"]
+layout_mode = 2
+text = "1000"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_8sk3m")
+}

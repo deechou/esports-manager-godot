@@ -1,0 +1,174 @@
+[gd_scene load_steps=3 format=3 uid="uid://ejwdq7wo6uj4"]
+
+[ext_resource type="Script" path="res://Screens/player_screen.gd" id="1_b2myb"]
+
+[sub_resource type="Theme" id="Theme_483tr"]
+
+[node name="PlayerScreen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b2myb")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.286275, 0.341176, 0.545098, 1)
+
+[node name="TopLeft" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+theme = SubResource("Theme_483tr")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+
+[node name="TimeLabel" type="Label" parent="ColorRect/TopLeft"]
+layout_mode = 2
+text = "CURRENT TIME: 7:00PM"
+
+[node name="TopRight" type="MarginContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -133.0
+offset_bottom = 46.0
+grow_horizontal = 0
+theme = SubResource("Theme_483tr")
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="MoneyLabel" type="Label" parent="ColorRect/TopRight"]
+layout_mode = 2
+text = "FUNDS: $1,000"
+
+[node name="Buttons" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.15
+anchor_top = 0.5
+anchor_right = 0.15
+anchor_bottom = 0.5
+offset_top = -20.0
+offset_right = 89.0
+offset_bottom = 20.0
+grow_vertical = 2
+
+[node name="StartButton" type="Button" parent="ColorRect/Buttons"]
+layout_mode = 2
+text = "GENERATE"
+
+[node name="ColorRect" type="ColorRect" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -219.0
+offset_top = -126.0
+offset_right = 217.0
+offset_bottom = 154.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.592157, 0.290196, 0.184314, 0.211765)
+
+[node name="StatLabels" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -97.0
+offset_right = 20.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stats" type="Label" parent="ColorRect/StatLabels"]
+layout_mode = 2
+text = "Stats
+"
+
+[node name="PlayerName" type="Label" parent="ColorRect/StatLabels"]
+layout_mode = 2
+text = "PlayerName"
+
+[node name="Player Handle" type="Label" parent="ColorRect/StatLabels"]
+layout_mode = 2
+text = "Player Handle"
+
+[node name="Laning" type="Label" parent="ColorRect/StatLabels"]
+layout_mode = 2
+text = "Laning
+"
+
+[node name="Teamwork" type="Label" parent="ColorRect/StatLabels"]
+layout_mode = 2
+text = "Teamwork"
+
+[node name="Consistency" type="Label" parent="ColorRect/StatLabels"]
+layout_mode = 2
+text = "Consistency"
+
+[node name="Confidence" type="Label" parent="ColorRect/StatLabels"]
+layout_mode = 2
+text = "Confidence"
+
+[node name="PlayerStats" type="VBoxContainer" parent="ColorRect"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.65
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stats" type="Label" parent="ColorRect/PlayerStats"]
+layout_mode = 2
+text = "_____________
+"
+
+[node name="PlayerName" type="Label" parent="ColorRect/PlayerStats"]
+layout_mode = 2
+text = "PlayerName"
+
+[node name="PlayerHandle" type="Label" parent="ColorRect/PlayerStats"]
+layout_mode = 2
+text = "Player Handle"
+
+[node name="Laning" type="Label" parent="ColorRect/PlayerStats"]
+layout_mode = 2
+text = "Laning
+"
+
+[node name="Teamwork" type="Label" parent="ColorRect/PlayerStats"]
+layout_mode = 2
+text = "Teamwork"
+
+[node name="Consistency" type="Label" parent="ColorRect/PlayerStats"]
+layout_mode = 2
+text = "Consistency"
+
+[node name="Confidence" type="Label" parent="ColorRect/PlayerStats"]
+layout_mode = 2
+text = "Confidence"
+
+[connection signal="button_down" from="ColorRect/Buttons/StartButton" to="." method="_on_start_button_button_down"]
