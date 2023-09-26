@@ -11,8 +11,14 @@ var rarity: State.RarityNames
 var role: State.Roles
 var portrait_number: int
 
-# I want players to be like rare items in Diablo
-# chance of some OP players, a lot of mediocre stuff
+var energy: int
+var morale: int
+var injured: bool
+
+
+var start_date: Dictionary
+var end_date: Dictionary
+
 
 # Intrinsic Stats (Outside of specific events, these stats will stay the same)
 var charisma: int   # Helps with sponsorship deals, streaming revenue, gaining fans
@@ -21,7 +27,7 @@ var work_ethic: int # Benefits Skill training
 var loyalty: int    # high loyalty keeps players on teams, keeps players with teammates they like
 
 
-# Skills [1-10] (These skills can be trained or upgraded in some way)
+# Skills [1-100] (These skills can be trained or upgraded in some way)
 var laning: int
 var teamwork: int
 var consistency: int

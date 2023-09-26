@@ -59,7 +59,6 @@ layout_mode = 2
 text = "SUBTRACT FUNDS"
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer/ColorRect"]
-visible = false
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -113,7 +112,6 @@ offset_bottom = 494.0
 color = Color(0.294118, 0.294118, 0.294118, 0.321569)
 
 [node name="StatLabels" type="VBoxContainer" parent="CanvasLayer/ColorRect"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.35
@@ -167,7 +165,6 @@ layout_mode = 2
 text = "Confidence"
 
 [node name="PlayerStats" type="VBoxContainer" parent="CanvasLayer/ColorRect"]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.5
@@ -263,7 +260,6 @@ tint_over = Color(0.454902, 0.454902, 0.454902, 1)
 tint_progress = Color(0.560784, 0.533333, 0.32549, 1)
 
 [node name="Portrait" type="Sprite2D" parent="CanvasLayer/ColorRect"]
-visible = false
 position = Vector2(458, 205)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("5_fm6ho")
