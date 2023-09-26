@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="EsportsManagerTest"
-run/main_scene="res://Screens/player_screen.tscn"
+run/main_scene="res://Characters/player_card.tscn"
 config/features=PackedStringArray("4.1", "Mobile")
 config/icon="res://icon.svg"
 
@@ -20,6 +20,14 @@ config/icon="res://icon.svg"
 State="*res://state.gd"
 Manager="*res://manager.gd"
 TransitionLayer="*res://Screens/transition_layer.tscn"
+
+[input]
+
+"Left Click"={
+"deadzone": 0.5,
+"events": [Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"button_mask":1,"position":Vector2(152, 13),"global_position":Vector2(156, 56),"factor":1.0,"button_index":1,"canceled":false,"pressed":true,"double_click":false,"script":null)
+]
+}
 
 [rendering]
 

@@ -30,6 +30,11 @@ func _ready():
 	load_file("res://Data/english-adjectives.txt", adjectives)
 	current_hour = 1
 	current_day = 1
+	create_default_player()
+
+func create_default_player():
+	var default_player = PlayerParent.new()
+	player_list.append(default_player)
 
 func pass_time(hours: int) -> void:
 	current_hour += hours

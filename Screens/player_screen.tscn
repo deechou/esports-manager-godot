@@ -1,8 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://ejwdq7wo6uj4"]
+[gd_scene load_steps=3 format=3 uid="uid://ejwdq7wo6uj4"]
 
 [ext_resource type="Script" path="res://Screens/player_screen.gd" id="1_b2myb"]
 [ext_resource type="PackedScene" uid="uid://bmgqmo77bep3l" path="res://Screens/overlay.tscn" id="2_74efq"]
-[ext_resource type="PackedScene" uid="uid://cnb8g5qwhngnr" path="res://Characters/player_card.tscn" id="7_44m7h"]
 
 [node name="PlayerScreen" type="Control"]
 layout_mode = 3
@@ -59,17 +58,6 @@ text = "SUBTRACT FUNDS"
 
 [node name="Cards" type="Node2D" parent="."]
 position = Vector2(-36, 107)
-
-[node name="PlayerCard" parent="Cards" instance=ExtResource("7_44m7h")]
-offset = Vector2(2.625, 0)
-rotation = -6.01615
-transform = Transform2D(0.964557, 0.263873, -0.263873, 0.964557, 2.625, 0)
-
-[node name="PlayerCard2" parent="Cards" instance=ExtResource("7_44m7h")]
-offset = Vector2(300, 0)
-rotation = -0.235619
-scale = Vector2(1.5, 1.5)
-transform = Transform2D(1.45855, -0.350168, 0.350168, 1.45855, 300, 0)
 
 [connection signal="button_down" from="CanvasLayer/ColorRect/Buttons/Generate" to="." method="_on_generate_button_down"]
 [connection signal="button_down" from="CanvasLayer/ColorRect/Buttons/GenerateCard" to="." method="_on_generate_card_button_down"]

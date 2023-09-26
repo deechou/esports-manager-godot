@@ -1,7 +1,7 @@
 extends Node2D
 class_name PlayerParent
 
-var player_id: int = -1
+var player_id: int = 1
 var player_first_name: String = "Isaac"
 var player_last_name: String = "Chou"
 var player_handle: String = "DarkWings"

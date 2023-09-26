@@ -1,0 +1,31 @@
+[gd_scene load_steps=2 format=3 uid="uid://1f6ckvq3n1b0"]
+
+[ext_resource type="PackedScene" uid="uid://cnb8g5qwhngnr" path="res://Characters/player_card.tscn" id="1_5gi2o"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+rotation = 1.41372
+skew = 0.663225
+
+[node name="PlayerCard" parent="Node2D" instance=ExtResource("1_5gi2o")]
+
+[node name="Node2D2" type="Node2D" parent="."]
+visible = false
+
+[node name="PlayerCard" parent="Node2D2" instance=ExtResource("1_5gi2o")]
+
+[node name="Node2D3" type="Node2D" parent="."]
+visible = false
+
+[node name="PlayerCard" parent="Node2D3" instance=ExtResource("1_5gi2o")]
+
+[node name="Node2D4" type="Node2D" parent="."]
+visible = false
+
+[node name="PlayerCard" parent="Node2D4" instance=ExtResource("1_5gi2o")]
+
+[node name="Node2D5" type="Node2D" parent="."]
+visible = false
+
+[node name="PlayerCard" parent="Node2D5" instance=ExtResource("1_5gi2o")]

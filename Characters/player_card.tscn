@@ -15,7 +15,6 @@
 script = ExtResource("1_5m8tv")
 
 [node name="MainBG" type="ColorRect" parent="."]
-unique_name_in_owner = true
 offset_right = 436.0
 offset_bottom = 512.0
 color = Color(0.654902, 0.454902, 0.121569, 1)

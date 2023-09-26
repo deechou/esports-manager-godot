@@ -1,6 +1,7 @@
 extends CanvasLayer
 class_name PlayerCard
 
+
 var player: PlayerParent
 
 var p1: Texture2D = load("res://Graphics/Portraits/1.jpg")
@@ -10,7 +11,7 @@ var p4: Texture2D = load("res://Graphics/Portraits/4.jpg")
 
 var portraits = [p1,p2,p3,p4]
 
-@onready var player_card: ColorRect = get_tree().find_node()
+@onready var player_card: ColorRect = $MainBG
 @onready var player_portrait: TextureRect = $MainBG/Border/PortraitBorder/Portrait
 @onready var player_name_label: Label = $MainBG/Border/Identity/VBoxContainer/PlayerName
 @onready var player_handle_label: Label = $MainBG/Border/Identity/VBoxContainer/PlayerHandle
@@ -33,6 +34,8 @@ func _init(p: PlayerParent):
 
 func _ready():
 	State.connect("player_updated", update_player_card_text)
+	player = State.player_list[0]
+	print(player.get_birthday_string())
 
 
 func update_player_card_text(player_id):
